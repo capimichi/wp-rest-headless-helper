@@ -1,0 +1,15 @@
+{
+    "name": "capimichi/wp-rest-headless-helper",
+    "autoload": {
+        "psr-4": {
+            "Capimichi\\WpRestHeadlessHelper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michele Capichioni",
+            "email": "capimichi@gmail.com"
+        }
+    ],
+    "require": {}
+}
