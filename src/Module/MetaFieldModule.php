@@ -1,5 +1,7 @@
 <?php
 
+namespace Capimichi\WpRestHeadlessHelper\Module;
+
 class MetaFieldModule implements ModuleInterface
 {
     
