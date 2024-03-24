@@ -1,5 +1,7 @@
 <?php
 
+namespace Capimichi\WpRestHeadlessHelper\Module;
+
 class SecurityModule implements ModuleInterface
 {
     
