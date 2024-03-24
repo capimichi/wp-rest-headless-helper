@@ -1,15 +1,31 @@
 {
-    "name": "capimichi/wp-rest-headless-helper",
-    "autoload": {
-        "psr-4": {
-            "Capimichi\\WpRestHeadlessHelper\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Michele Capichioni",
-            "email": "capimichi@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "capimichi/wp-rest-headless-helper",
+  "autoload": {
+    "psr-4": {
+      "Capimichi\\WpRestHeadlessHelper\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Michele Capichioni",
+      "email": "capimichi@gmail.com"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "typisttech/imposter-plugin": true
+    }
+  },
+  "extra": {
+    "imposter": {
+      "namespace": "Capimichi\\WpRestHeadlessHelper\\Lib",
+      "excludes": [
+        "dummy/dummy-excluded"
+      ]
+    }
+  },
+  "require": {
+    "typisttech/imposter-plugin": "^0.6.2",
+    "jms/serializer": "^3.30"
+  }
 }
