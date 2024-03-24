@@ -21,7 +21,7 @@ class SecurityModule implements ModuleInterface
         add_action('pre_get_posts', [$this, 'filterForAuthenticatedUserOnPosts']);
     }
     
-    protected function filterForAuthenticatedUserOnPosts($query)
+    public function filterForAuthenticatedUserOnPosts($query)
     {
         if (is_admin()) {
             return;
