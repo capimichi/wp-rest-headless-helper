@@ -26,7 +26,10 @@ class MetaFieldModule implements ModuleInterface
         }
     }
     
-    public function addCustomMetaToRestResponse()
+    /**
+     * Add custom meta to the REST response
+     */
+    protected function addCustomMetaToRestResponse()
     {
         $postTypes = get_post_types(['show_in_rest' => true], 'objects');
         foreach ($postTypes as $postType) {
@@ -41,6 +44,13 @@ class MetaFieldModule implements ModuleInterface
         }
     }
     
+    /**
+     * Update custom meta from REST request
+     *
+     * @param WP_Post $post
+     * @param WP_REST_Request $request
+     * @param bool $creating
+     */
     protected function updateCustomMetaFromRest($post, $request, $creating)
     {
         if (isset($request[self::CUSTOM_META_KEY])) {
